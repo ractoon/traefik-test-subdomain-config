@@ -1,0 +1,4 @@
+# Add more domains as needed, one per line
+*.test
+traefik.test
+example.test
