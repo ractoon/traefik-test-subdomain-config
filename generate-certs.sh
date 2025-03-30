@@ -15,8 +15,8 @@ LATEST_KEY=$(ls -t _*-key* | head -1)
 echo "Using certificate: $LATEST_CERT and key: $LATEST_KEY"
 
 # Copy to Traefik certs directory with standard names
-cp "$LATEST_CERT" ./certs/_wildcard.test.pem
-cp "$LATEST_KEY" ./certs/_wildcard.test-key.pem
+mv "$LATEST_CERT" ./certs/_wildcard.test.pem
+mv "$LATEST_KEY" ./certs/_wildcard.test-key.pem
 
 # Make sure permissions are correct
 chmod 644 ./certs/*.pem
